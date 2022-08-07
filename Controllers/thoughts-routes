@@ -1,0 +1,10 @@
+//GET all thoughts
+
+
+//GET single thought by ID
+
+//POST to creat a new thought (puch created thought _id to to the associated user's thoughts array field)
+
+// PUT to update a thought by its _id
+
+//DELETE to remove a thought by its _id
