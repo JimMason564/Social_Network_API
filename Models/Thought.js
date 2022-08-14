@@ -1,7 +1,6 @@
-//THOUGHT  needs include thoughtText, createdAt, username, reactions
-
 const { Schema, model } = require('mongoose');
 const moment = require('moment');
+const reactionSchema = require ("./Reaction")
 
 
 // Schema to create Thought model
@@ -22,40 +21,20 @@ const thoughtSchema = new Schema(
       type: String,
       required: true,
     }],
+    reactions: [
+      reactionSchema
+    ]
+  },
+  {
     toJSON: {
-      virtuals: true,
       getters: true,
     },
     id:false
   }
 );
 
-const reactionSchema = new Schema({
-  reactionId: {
-    type: Schema.Types.ObjectId,
-    default: () => new Types.ObjectId
-  },
-  reactionText: {
-    type: String,
-    required: true,
-    maxlength: 280,
-    minlength: 1,
-  },
-  username: {
-    type: String,
-    required: true,
-  },
-  createdAt: {
-    type: Date,
-    default:Date.now,
-    get: (createdAtVal) => moment(createdAtVal).format('MMMM DD, YYYY [,] hh:mm a')
-  },
-  toJSON: {
-    getters: true,
-  },
-}
 
-);
+//Reaction count
 thoughtSchema.virtual('reactionCount').get(function(){
     return this.reaction.length;
 })

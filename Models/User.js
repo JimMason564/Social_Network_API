@@ -19,8 +19,8 @@ const userSchema = new Schema(
       validate: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
     },
     thoughts: [{
-      type: Schema.Types,ObjectId,
-      ref: 'Thoughts'
+      type: Schema.Types.ObjectId,
+      ref: 'Thought'
     }],
     friends: [{
         type: Schema.Types.ObjectId,
@@ -29,7 +29,7 @@ const userSchema = new Schema(
   },
   {
     toJSON: {
-      getters: true,
+     virtuals: true,
     },
     id:false
   }
