@@ -2,6 +2,11 @@
 
 ## Description
 
+A basic social media API allowing users to add friends and thoughts and react to their friends thoughts. This app utilizes MongoDB and IDB to run.
+
+## Instructions
+
+
 
 ## User Story
 

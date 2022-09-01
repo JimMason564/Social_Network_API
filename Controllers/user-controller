@@ -36,7 +36,7 @@ module.exports = {
 
   updateUser(req, res) {
     User.findOneAndUpdate(
-      { _id: req.params.courseId },
+      { _id: req.params.userId },
       { $set: req.body },
       { runValidators: true, new: true }
     )
@@ -74,7 +74,7 @@ module.exports = {
       });
   },
 
-  // Add an assignment to a user
+ 
   addFriend(req, res) {
     console.log('You are adding a friend');
     console.log(req.body);
