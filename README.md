@@ -2,11 +2,10 @@
 
 ## Description
 
-A basic social media API allowing users to add friends and thoughts and react to their friends thoughts. This app utilizes MongoDB and IDB to run.
+A basic social media API back-end allowing users to add friends and thoughts and react to their friends thoughts. This app utilizes MongoDB and IDB to run. As this is back-end only, this program is not deployed.
 
 ## Instructions
-
-
+Open the code in VSCode or another code editing program. Open terminal and enter "NPM Install" and then "NPM Start to start the app's server. This is a back-end only program so you will need Insomnia in order to see the routes work.
 
 ## User Story
 
@@ -22,7 +21,9 @@ WHEN I test API POST and DELETE routes in Insomnia
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 ```
 ## Screenshot
+[Click here to see a full video walkthrough of the app's functionality](https://drive.google.com/file/d/1gm6DJWLbirU2QYWL4glB_ozOBrWSVimc/view)
 
+![Screenshot](./utils/snapi.jpeg)
 
 ## Links
 
